@@ -1,0 +1,29 @@
+{
+  "screen": "home_screen",
+  "kind": "list",
+  "topBar": {
+    "title": "Notas V8",
+    "actions": [
+      {
+        "type": "icon_button",
+        "icon": "refresh",
+        "onPressed": "refresh_list"
+      }
+    ]
+  },
+  "body": {
+    "type": "empty",
+    "message": "App gerada pelo KATA."
+  },
+  "fab": {
+    "icon": "+",
+    "visible": false
+  },
+  "colors": {
+    "primary": "#1BB9BE",
+    "background": "#F8FAFC",
+    "text": "#000000",
+    "onPrimary": "#FFFFFF",
+    "onBackground": "#000000"
+  }
+}
