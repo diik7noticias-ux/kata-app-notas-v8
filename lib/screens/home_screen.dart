@@ -84,7 +84,7 @@ class _HomeScreenState extends State<HomeScreen> {
       body: ValueListenableBuilder<Box<Task>>(
         valueListenable: taskBox.listenable(),
         builder: (context, box, child) {
-          final tasks = box.values.toList()..sort((a, b) => b.isCompleted.compareTo(a.isCompleted));
+          final tasks = box.values.toList()..sort((a, b) => (a.isCompleted ? 1 : 0).compareToInt((b.isCompleted ? 1 : 0)));
           return ListView.builder(
             itemCount: tasks.length,
             itemBuilder: (context, index) {
@@ -124,7 +124,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
   @override
   void dispose() {
-    Hive.closePoly();
+    Hive.close();
     super.dispose();
   }
 }
